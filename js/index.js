@@ -58,8 +58,8 @@ function zoom(event) {
   introH2.addEventListener('wheel', zoom)
 
   //nav prevent default
-  const navItems = document.querySelectorAll(nav)
-  navItems.forEach(item => item.addEventListener(event => event.preventDefault()))
+  const navItems = document.querySelectorAll('nav a')
+  navItems.forEach(item => item.addEventListener('click', event => event.preventDefault()))
 
   //nested items
 
@@ -76,5 +76,5 @@ function zoom(event) {
 
   function alert2(event){
       window.alert('div2')
-    event.stopPropogation();
+    event.stopPropagation();
   }
