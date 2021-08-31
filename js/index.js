@@ -60,3 +60,21 @@ function zoom(event) {
   //nav prevent default
   const navItems = document.querySelectorAll(nav)
   navItems.forEach(item => item.addEventListener(event => event.preventDefault()))
+
+  //nested items
+
+  const nestedDiv1 = document.querySelector('#nest1')
+  nestedDiv1.addEventListener('click', alert1)
+
+  const nestedDiv2 = document.querySelector('#nest2')
+  nestedDiv2.addEventListener('click', alert2)
+
+
+  function alert1 (){
+      window.alert('div1')
+  }
+
+  function alert2(event){
+      window.alert('div2')
+    event.stopPropogation();
+  }
